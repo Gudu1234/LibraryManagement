@@ -1,0 +1,99 @@
+.label-forget {
+    -fx-text-fill: derive(darkgrey, 20%);
+}
+.label-forget:hover {
+    -fx-text-fill: blue;
+    -fx-text-decoration: underline;
+    -fx-cursor: hand;
+}
+.label-signin {
+    -fx-text-fill: linear-gradient(to bottom right, #3823A8, #5E2FA1, #C3449A);
+    -fx-font-weight: bold;
+}
+
+.label-error {
+    -fx-text-fill: red;
+}
+.pane-leftpane {
+    -fx-background-color: linear-gradient(to bottom left, #37B9E9, #3EC9D6, #78C1C0, #87BFBC);
+}
+.button-signIn {
+    -fx-background-color: #37B9E9;
+    -fx-background-radius: 20;
+    -fx-border-radius: 200px;
+    -fx-border-color: #87BFBC;
+    -fx-font-weight: bold;
+}
+
+.button-signIn:hover {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20;
+    -fx-text-fill: darkblue;
+    -fx-cursor: hand;
+}
+
+.button-signIn:pressed {
+    -fx-background-color: linear-gradient(to bottom left, #37B9E9, #3EC9D6, #78C1C0, #87BFBC);
+    -fx-text-fill: black;
+}
+
+.button-signUp {
+    -fx-background-color: #bae7f7;
+    -fx-text-fill: #179ecf;
+    -fx-background-radius: 20;
+    -fx-border-radius: 200px;
+    -fx-border-color: #87BFBC;
+    -fx-font-weight: bold;
+}
+.button-signUp:hover {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #30b7e8;
+    -fx-cursor: hand;
+}
+.button-signUp:pressed {
+    -fx-background-color: linear-gradient(to bottom left, #37B9E9, #3EC9D6, #78C1C0, #87BFBC);
+    -fx-text-fill: black;
+}
+
+.text-field {
+    -fx-border-color: linear-gradient(to bottom right, #3823A8, #5E2FA1, #C3449A);
+    -fx-background-color: #ffffff;
+    -fx-font-weight: bold;
+    -fx-border-width: 0 0 2 0;
+    -fx-pref-width: 290;
+    -fx-font-size: 15;
+}
+
+.dialog-button {
+    -fx-pref-width: 100;
+    -fx-pref-height: 34;
+    -fx-background-color: linear-gradient(to bottom right, #3823A8, #5E2FA1, #C3449A);
+    -fx-background-radius: 40;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 200px;
+    -fx-border-width: 2;
+}
+.dialog-button:hover {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 40;
+    -fx-font-weight: bold;
+    -fx-border-color: #87BFBC;
+    -fx-text-fill: #30b7e8;
+    -fx-cursor: hand;
+}
+.dialog-button:pressed {
+    -fx-background-color: linear-gradient(to bottom left, #37B9E9, #3EC9D6, #78C1C0, #87BFBC);
+    -fx-text-fill: black;
+    -fx-border-color: #30b7e8;
+}
+.glyph-icon {
+    -fx-fill: linear-gradient(to bottom right, #3823A8, #5E2FA1, #C3449A);
+}
+.glyph-icon:hover {
+    -fx-cursor: default;
+}
+.glyph-icon-login-password:hover {
+    -fx-cursor: hand;
+}
+

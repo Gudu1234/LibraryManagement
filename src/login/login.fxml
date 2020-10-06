@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.textfield.CustomPasswordField?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+
+<StackPane fx:id="stackPane" stylesheets="@design.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+   <children>
+      <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="693.0">
+         <children>
+            <BorderPane fx:id="borderPane" onMouseClicked="#handleBorderPaneMouseClicked" prefHeight="426.0" prefWidth="693.0">
+               <left>
+                  <Pane fx:id="leftPane" prefHeight="426.0" prefWidth="299.0" styleClass="pane-leftpane" BorderPane.alignment="CENTER">
+                     <children>
+                        <Circle fx:id="btnClose" fill="#ff6f30" layoutX="21.0" layoutY="15.0" onMouseClicked="#handleButtonClose" radius="7.0" stroke="WHITE" strokeWidth="3.0" />
+                        <Circle fx:id="btnMaximize" fill="#ff8f30" layoutX="44.0" layoutY="15.0" radius="7.0" stroke="WHITE" strokeWidth="3.0" />
+                        <Circle fx:id="btnMinimize" fill="#abff30" layoutX="67.0" layoutY="15.0" onMouseClicked="#handleButtonMinimize" radius="7.0" stroke="WHITE" strokeWidth="3.0" />
+                        <Label layoutX="28.0" layoutY="289.0" prefHeight="42.0" prefWidth="251.0" styleClass="label-signin" text="Library Assistant Login">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <effect>
+                              <Glow level="0.39" />
+                           </effect>
+                        </Label>
+                        <ImageView fx:id="mainImage" fitHeight="170.0" fitWidth="196.0" layoutX="50.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" style="visibility: true;">
+                           <image>
+                              <Image url="@../resources/library.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </left>
+               <center>
+                  <StackPane BorderPane.alignment="CENTER">
+                     <children>
+                        <Pane fx:id="paneSignUpPassword" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Button fx:id="btnCreateAccount" layoutX="222.0" layoutY="284.0" mnemonicParsing="false" onAction="#handleCreateAccButton" styleClass="button-signIn" text="Create Account">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="89.0" layoutY="31.0" prefHeight="35.0" prefWidth="117.0" styleClass="label-signin" text="Password">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblWrongPassword2" layoutX="66.0" layoutY="241.0" prefHeight="26.0" prefWidth="274.0" text="Label" visible="false" />
+                              <Label fx:id="lblWrongPasswordFormat" layoutX="66.0" layoutY="163.0" prefHeight="21.0" prefWidth="274.0" text="Label" visible="false" />
+                              <FontAwesomeIconView glyphName="BACKWARD" layoutX="48.0" layoutY="83.0" onMouseClicked="#handleBackSignUpPasswordButton" size="30" styleClass="glyph-icon-pane" textAlignment="CENTER" wrappingWidth="36.0">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#18b5ab" />
+                                          <Stop color="#c70cac" offset="0.6590038314176245" />
+                                          <Stop color="#c70cac" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </FontAwesomeIconView>
+                              <CustomPasswordField fx:id="signUpPassword" layoutX="65.0" layoutY="120.0" prefHeight="35.0" prefWidth="305.0" promptText="Enter Password" />
+                              <CustomPasswordField fx:id="signUpConfirmPassword" layoutX="65.0" layoutY="190.0" prefHeight="35.0" prefWidth="305.0" promptText="Re-Enter Password" />
+                              <MaterialDesignIconView glyphName="KEY" layoutX="22.0" layoutY="150.0" size="35" />
+                              <MaterialDesignIconView glyphName="KEY" layoutX="22.0" layoutY="220.0" size="35" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="paneForgetPassword" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Button fx:id="btnChangePassword" layoutX="219.0" layoutY="292.0" mnemonicParsing="false" onAction="#handleChangePasswordButton" styleClass="button-signIn" text="Change Password">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="90.0" layoutY="31.0" styleClass="label-signin" text="Change Password">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblWrongPassword" layoutX="66.0" layoutY="237.0" prefHeight="41.0" prefWidth="278.0" text="Label" visible="false" />
+                              <Label fx:id="lblWrongPasswordFormat2" layoutX="66.0" layoutY="163.0" prefHeight="23.0" prefWidth="278.0" text="Label" visible="false" />
+                              <FontAwesomeIconView glyphName="BACKWARD" layoutX="48.0" layoutY="83.0" onMouseClicked="#handleBackForgetPasswordButton" size="30" styleClass="glyph-icon-pane" textAlignment="CENTER" wrappingWidth="36.0">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#18b5ab" />
+                                          <Stop color="#c70cac" offset="0.6590038314176245" />
+                                          <Stop color="#c70cac" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </FontAwesomeIconView>
+                              <CustomPasswordField fx:id="newPassword" layoutX="65.0" layoutY="120.0" prefHeight="35.0" prefWidth="305.0" promptText="Enter New Password" />
+                              <CustomPasswordField fx:id="confirmPassword" layoutX="65.0" layoutY="190.0" prefHeight="35.0" prefWidth="305.0" promptText="Confirm New Password" />
+                              <MaterialDesignIconView glyphName="KEY" layoutX="22.0" layoutY="150.0" size="35" />
+                              <MaterialDesignIconView glyphName="KEY" layoutX="22.0" layoutY="220.0" size="35" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="paneSignUpStarted" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Button fx:id="btnGetStarted" layoutX="248.0" layoutY="202.0" mnemonicParsing="false" onAction="#handleGetStartedButton" prefHeight="34.0" prefWidth="99.0" styleClass="button-signIn" text="Get Started">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="75.0" layoutY="31.0" styleClass="label-signin" text="Sign Up">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblInvalidEmailInput" layoutX="75.0" layoutY="165.0" prefHeight="22.0" prefWidth="231.0" text="Label" visible="false" />
+                              <FontAwesomeIconView glyphName="BACKWARD" layoutX="51.0" layoutY="92.0" onMouseClicked="#handleBackSignUpButton" size="30" styleClass="glyph-icon-pane" textAlignment="CENTER" wrappingWidth="36.0">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#18b5ab" />
+                                          <Stop color="#c70cac" offset="0.6590038314176245" />
+                                          <Stop color="#c70cac" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </FontAwesomeIconView>
+                              <CustomTextField fx:id="signUpEmail" layoutX="65.0" layoutY="118.0" onAction="#handleGetStartedButton" prefHeight="35.0" prefWidth="305.0" promptText="Enter Email Id" />
+                              <MaterialDesignIconView glyphName="EMAIL" layoutX="22.0" layoutY="148.0" size="35" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="paneSignIn" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Button fx:id="btnSignIn" layoutX="250.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleSignInButton" prefHeight="34.0" prefWidth="99.0" styleClass="button-signIn" text="Sign In">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                              </Button>
+                              <Label fx:id="lblForgetPassword" layoutX="57.0" layoutY="290.0" onMouseClicked="#handleForgetPasswordButton" prefHeight="25.0" prefWidth="112.0" styleClass="label-forget" text="Forget Password?" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnSignUp" layoutX="66.0" layoutY="355.0" mnemonicParsing="false" onAction="#handleSignUpButton" prefHeight="40.0" prefWidth="274.0" styleClass="button-signUp" text="Don't Have an Account? Sign UP.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="57.0" layoutY="41.0" styleClass="label-signin" text="Sign In">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelInvalidPassword" layoutX="66.0" layoutY="248.0" prefHeight="23.0" prefWidth="273.0" text="Label" visible="false" />
+                              <CustomTextField fx:id="signInEmail" layoutX="65.0" layoutY="118.0" prefHeight="35.0" prefWidth="305.0" promptText="Email" />
+                              <CustomPasswordField fx:id="signInPassword" layoutX="65.0" layoutY="206.0" prefHeight="35.0" prefWidth="305.0" promptText="Password" />
+                              <MaterialDesignIconView glyphName="KEY" layoutX="22.0" layoutY="236.0" size="35" />
+                              <MaterialDesignIconView glyphName="EMAIL" layoutX="22.0" layoutY="148.0" size="35" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@design.css" />
+      <URL value="@../mainWindow/main_window.css" />
+   </stylesheets>
+</StackPane>

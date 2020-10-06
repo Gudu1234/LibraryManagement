@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LibraryManagement:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LibraryManagement_jar</output-path>
+    <root id="archive" name="LibraryManagement.jar">
+      <element id="module-output" name="LibraryManagement" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Jar Libraries/AnimateFX-1.2.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Jar Libraries/controlsfx-8.40.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Jar Libraries/jfoenix-8.0.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Jar Libraries/fontawesomefx-8.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Jar Libraries/mysql-connector-java-8.0.18/mysql-connector-java-8.0.18.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

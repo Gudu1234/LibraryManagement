@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" stylesheets="@../mainWindow/main_window.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="students.AddStudentsBatchController">
+   <children>
+      <AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Pane fx:id="paneAddStudents" layoutY="-8.0" prefHeight="417.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom left, #37B9E9, #3EC9D6, #78C1C0, #87BFBC);" AnchorPane.bottomAnchor="-9.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-8.0">
+               <children>
+                  <Label layoutX="29.0" layoutY="35.0" prefHeight="26.0" prefWidth="150.0" text="Enter the ID of Student:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="29.0" layoutY="105.0" prefHeight="26.0" prefWidth="150.0" text="Name of Student:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="29.0" layoutY="175.0" prefHeight="26.0" prefWidth="150.0" text="Joining Year of Student:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="29.0" layoutY="245.0" prefHeight="26.0" prefWidth="150.0" text="Contact no:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfStudentId" layoutX="30.0" layoutY="61.0" prefHeight="33.0" prefWidth="519.0" styleClass="text-field-dashboard" />
+                  <TextField fx:id="tfStudentName" layoutX="30.0" layoutY="131.0" prefHeight="33.0" prefWidth="519.0" promptText="student name" styleClass="text-field-dashboard" />
+                  <TextField fx:id="tfJoiningYear" layoutX="30.0" layoutY="201.0" prefHeight="33.0" prefWidth="519.0" styleClass="text-field-dashboard" />
+                  <TextField fx:id="tfContactStudent" layoutX="30.0" layoutY="271.0" prefHeight="33.0" prefWidth="519.0" promptText="Mobile no." styleClass="text-field-dashboard" />
+                  <Button fx:id="btnAddStudent" layoutX="40.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleAddStudentOperation" prefHeight="43.0" prefWidth="213.0" styleClass="button-issue" text="Add To Database" />
+                  <Button fx:id="btnCancel" layoutX="336.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleCancelOperation" prefHeight="43.0" prefWidth="213.0" styleClass="button-issue" text="Cancel" />
+                  <Label fx:id="lblSuccess" layoutX="47.0" layoutY="304.0" prefHeight="25.0" prefWidth="412.0" text="Label" visible="false" />
+                  <FontAwesomeIconView glyphName="CLOSE" layoutX="577.0" layoutY="33.0" onMouseClicked="#handleCloseOperation" size="22">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#ea62ff" />
+                              <Stop color="#ea62ff" offset="0.16858237547892715" />
+                              <Stop color="#183eff" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontAwesomeIconView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
