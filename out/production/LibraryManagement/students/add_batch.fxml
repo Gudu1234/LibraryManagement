@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" stylesheets="@../mainWindow/main_window.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="students.AddBatchController">
+   <children>
+      <AnchorPane fx:id="anchorPane" prefHeight="289.0" prefWidth="496.0">
+         <children>
+            <Pane prefHeight="289.0" prefWidth="496.0" style="-fx-background-color: linear-gradient(to bottom left, #37B9E9, #3EC9D6, #78C1C0, #87BFBC);">
+               <children>
+                  <Label layoutX="26.0" layoutY="35.0" prefHeight="32.0" prefWidth="150.0" text="Enter the Batch No.">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label layoutX="26.0" layoutY="110.0" prefHeight="32.0" prefWidth="300.0" text="Enter total no. of Seats available in this Batch:">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="tfBatchNo" layoutX="27.0" layoutY="67.0" prefHeight="32.0" prefWidth="401.0" promptText="Year of Joining in figure(2010)" styleClass="text-field-dashboard" />
+                  <TextField fx:id="tfTotalSeats" layoutX="27.0" layoutY="142.0" onAction="#handleAddBatchOperation" prefHeight="32.0" prefWidth="401.0" promptText="Total Seats" styleClass="text-field-dashboard" />
+                  <Button fx:id="btnaddBatch" layoutX="53.0" layoutY="218.0" mnemonicParsing="false" onAction="#handleAddBatchOperation" prefHeight="48.0" prefWidth="176.0" styleClass="button-issue" text="Add" />
+                  <Button fx:id="btnCancel" layoutX="248.0" layoutY="218.0" mnemonicParsing="false" onAction="#handleCancelOperation" prefHeight="48.0" prefWidth="176.0" styleClass="button-issue" text="Cancel" />
+                  <Label fx:id="lblSuccess" layoutX="39.0" layoutY="181.0" prefHeight="25.0" prefWidth="321.0" text="Label" visible="false" />
+                  <FontAwesomeIconView glyphName="CLOSE" layoutX="473.0" layoutY="21.0" onMouseClicked="#handleCloseOperation" size="22">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#ea62ff" />
+                              <Stop color="#ea62ff" offset="0.16858237547892715" />
+                              <Stop color="#183eff" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontAwesomeIconView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
